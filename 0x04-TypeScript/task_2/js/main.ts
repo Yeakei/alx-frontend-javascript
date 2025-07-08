@@ -65,3 +65,19 @@ function executeWork(employee: Director | Teacher): string {
 // --- Testing ---
 console.log(executeWork(createEmployee(200))); // Output: Getting to work
 console.log(executeWork(createEmployee(1000))); // Output: Getting to director tasks
+
+// Literal type
+type Subjects = "Math" | "History";
+
+// Function that uses the literal type
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    } else {
+        return "Teaching History";
+    }
+}
+
+// --- Testing ---
+console.log(teachClass("Math")); // Output: Teaching Math
+console.log(teachClass("History")); // Output: Teaching History
